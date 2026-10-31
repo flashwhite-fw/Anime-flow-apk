@@ -1,0 +1,11 @@
+{
+  "name": "AnimeFlow",
+  "short_name": "AnimeFlow",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0d0e12",
+  "theme_color": "#0d0e12",
+  "description": "Application mobile AnimeFlow",
+  "orientation": "portrait",
+  "icons": []
+}

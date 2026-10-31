@@ -1,1 +1,132 @@
-<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=https://animeflow2026.netlify.app"><body style="background:#0d0e12">
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0d0e12" />
+    <meta name="description" content="AnimeFlow — application mobile de streaming anime" />
+    <title>AnimeFlow</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">A</div>
+          <div>
+            <p class="eyebrow">App mobile</p>
+            <h1>AnimeFlow</h1>
+          </div>
+        </div>
+        <button class="icon-btn" aria-label="Notifications">🔔</button>
+      </header>
+
+      <main class="content">
+        <section class="hero-card">
+          <div class="hero-copy">
+            <span class="label">Saison 2026</span>
+            <h2>Ton prochain anime
+              commence ici.</h2>
+            <button class="primary-btn">Regarder maintenant</button>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orb orb-one"></div>
+            <div class="orb orb-two"></div>
+            <div class="poster">
+              <span>NEON</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="search-wrap">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" id="searchInput" placeholder="Rechercher un anime" />
+        </section>
+
+        <section class="section-header">
+          <h3>Catégories</h3>
+          <a href="#">Voir tout</a>
+        </section>
+        <div class="chip-row" id="chipRow">
+          <button class="chip active" data-filter="all">Tout</button>
+          <button class="chip" data-filter="action">Action</button>
+          <button class="chip" data-filter="fantasy">Fantasy</button>
+          <button class="chip" data-filter="romance">Romance</button>
+          <button class="chip" data-filter="slice">Slice of life</button>
+        </div>
+
+        <section class="section-header">
+          <h3>À regarder</h3>
+          <a href="#">Plus</a>
+        </section>
+        <div class="card-list" id="animeList">
+          <article class="anime-card" data-category="action">
+            <div class="cover cover-one"><span>01</span></div>
+            <div class="meta">
+              <h4>Shadow Rift</h4>
+              <p>Action · 24 eps</p>
+            </div>
+          </article>
+
+          <article class="anime-card" data-category="fantasy">
+            <div class="cover cover-two"><span>02</span></div>
+            <div class="meta">
+              <h4>Moonveil</h4>
+              <p>Fantasy · 12 eps</p>
+            </div>
+          </article>
+
+          <article class="anime-card" data-category="romance">
+            <div class="cover cover-three"><span>03</span></div>
+            <div class="meta">
+              <h4>Petals & Echo</h4>
+              <p>Romance · 11 eps</p>
+            </div>
+          </article>
+
+          <article class="anime-card" data-category="slice">
+            <div class="cover cover-four"><span>04</span></div>
+            <div class="meta">
+              <h4>Harbor Lights</h4>
+              <p>Slice of life · 8 eps</p>
+            </div>
+          </article>
+        </div>
+
+        <section class="section-header">
+          <h3>Continuer</h3>
+          <a href="#">Historique</a>
+        </section>
+        <div class="continue-list">
+          <div class="continue-item">
+            <div class="mini-cover cover-five"></div>
+            <div>
+              <h4>Violet Circuit</h4>
+              <p>Épisode 6 · 14 min restants</p>
+            </div>
+            <div class="progress"><span style="width: 62%"></span></div>
+          </div>
+
+          <div class="continue-item">
+            <div class="mini-cover cover-six"></div>
+            <div>
+              <h4>Drift Heaven</h4>
+              <p>Épisode 2 · 33 min restants</p>
+            </div>
+            <div class="progress"><span style="width: 38%"></span></div>
+          </div>
+        </div>
+      </main>
+
+      <nav class="bottom-nav" aria-label="Navigation principale">
+        <button class="nav-item active" aria-label="Accueil">⌂</button>
+        <button class="nav-item" aria-label="Découvrir">◌</button>
+        <button class="nav-item" aria-label="Bibliothèque">▣</button>
+        <button class="nav-item" aria-label="Profil">◉</button>
+      </nav>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
