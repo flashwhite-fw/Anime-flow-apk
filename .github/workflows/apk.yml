@@ -1,0 +1,29 @@
+name: Build APK
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: 21 }
+      - run: npm install --no-audit --no-fund
+      - run: npx cap add android
+      - name: Icône AnimeFlow
+        continue-on-error: true
+        run: npx capacitor-assets generate --android
+      - run: npx cap sync android
+      - name: Rendre gradlew exécutable
+        run: chmod +x android/gradlew
+      - name: Compiler l'APK
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AnimeFlow-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
