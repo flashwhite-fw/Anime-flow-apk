@@ -1,0 +1,10 @@
+{
+  "appId": "com.flashwhite.animeflow",
+  "appName": "AnimeFlow",
+  "webDir": "www",
+  "backgroundColor": "#0d0e12",
+  "server": {
+    "url": "https://animeflow2026.netlify.app",
+    "androidScheme": "https"
+  }
+}
